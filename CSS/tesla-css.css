@@ -1,0 +1,509 @@
+:root {
+    font-size: 16px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: sans-serif;
+    overflow-x: hidden;
+}
+
+/* ---------------------------------------------------------------- WRAPPER */
+
+.wrapper {
+    width: 100%;
+}
+
+/* ---------------------------------------------------------------- WRAPPER */
+
+.landing-page {
+    min-height: 100vh;
+    background-image: url(/IMG/portrait2.jpg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+/* ---------------------------------------------------------------- MENU */
+
+.menu {
+    position: relative;
+}
+
+.menu .logo h1 {
+    font-size: 1.5em;
+    padding: 0.2em;
+}
+
+.menu li, .sub-navbar li {
+    list-style: none;
+    line-height: 1.8em;
+    text-decoration: none;
+}
+
+.menu li a {
+    text-decoration: none;
+    color: black;
+}
+
+.menu .logo {
+    float: left;
+}
+
+.both-bar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transform: translate(100%);
+    transition: all 1s ease;
+}
+
+.both-bar li {
+    margin-top: 10px;
+    border-top: 2px solid rgba(255, 255, 255, 0.178);
+    border-bottom: 2px solid rgba(255, 255, 255, 0.178);
+}
+
+#hamnav input:checked~.both-bar {
+    transform: translate(0);
+}
+
+#hamnav input {
+    display: none;
+}
+
+#hamnav label {
+    z-index: 100;
+    margin-left: 77%;
+}
+
+.navbar {
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    border-top: 2px solid rgb(255, 255, 255);
+}
+
+.sub-navbar {
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    border-bottom: 2px solid rgb(255, 255, 255);
+    text-align: center;
+}
+
+.menu .navbar, .sub-navbar {
+    background-color: rgba(255, 255, 255, 0.795);
+    filter: blur(100%);
+    backdrop-filter: blur(100%);
+}
+
+/* ---------------------------------------------------------------- MENU */
+
+.up-text {
+    /* position: absolute;
+    margin-top: 5em;
+    margin-left: 7em; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    transform: translateX(-8%);
+    transform: translateY(81%);
+}
+
+.up-text h1, p {
+    text-align: center;
+    margin: 0 auto;
+}
+
+.down-text {
+    width: 100%;
+    /* min-height: 75vh; */
+    display: flex;
+    justify-content: space-evenly;
+    /* transform: translateY(196%); */
+    /* margin-top: 22em; */
+    position: relative;
+}
+
+.down-text-container {
+    display: flex;
+    justify-content: space-evenly;
+    min-height: 140vh;
+    align-items: center;
+    position: absolute;
+    /* margin-bottom: 2em; */
+    padding: 1em;
+}
+
+.down-text-left-block {
+    padding: 1em;
+}
+
+.down-text-middle-block {
+    padding: 1.2em;
+}
+
+.down-text-rigth-block {
+    padding: 1em;
+}
+
+/* .down-text p{
+    margin-bottom: 7em;
+    margin-left: -1.3em;
+    display: block;
+    text-align: center ;
+    justify-content: space-evenly;
+    align-items: center;
+
+} */
+
+#smaller-text {
+    color: rgb(43, 42, 42);
+}
+
+.button-container {
+    width: auto;
+    min-height: auto;
+    /* position: relative; */
+}
+
+#ctc1 {
+    margin-bottom: 0.3em;
+    font-size: 1.23em;
+    border: 1px solid black;
+    /* display: block; */
+    width: 100%;
+    padding: 14px 5em;
+    cursor: pointer;
+    text-align: center;
+    background-color: transparent;
+    position: absolute;
+    bottom: 0;
+}
+
+.interior-section1 {
+    color: rgb(177, 177, 177);
+    min-height: 100vh;
+    text-align: center;
+    font-size: 0.8em;
+    background-image: url(/IMG/interior1.jpeg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.interior-section1::before {
+    content: "";
+    position: absolute;
+    top: 100vh;
+    left: 0;
+    height: 8em;
+    width: 100%;
+    background: linear-gradient(to top, transparent 0%, black 100%);
+}
+
+.interior-section1 h1 {
+    transform: translateY(1em)
+}
+
+.interior-section2 {
+    width: 100%;
+    min-height: 100vh;
+    background-color: black;
+}
+
+.slide {
+    width: auto;
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    animation: slide 10s linear infinite;
+    -webkit-animation: slide 10s ease infinite forwards;
+}
+
+@-webkit-keyframes {
+    from {
+        transform: translate(0);
+    }
+    to {
+        transform: translate(50%);
+    }
+}
+
+.first-bg {
+    background-image: url(/IMG/MX-Exterior-Grid-A-Desktop.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 100vh;
+}
+
+.second-bg {
+    background-image: url(/IMG/tesla-model-x-submodel.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 100vh;
+}
+
+.third-bg {
+    background-image: url(/IMG/MX-Order-Hero-Desktop.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 100vh;
+}
+
+.fourth-bg {
+    background-image: url(/IMG/tesla-model-x_100777013_h.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 100vh;
+}
+
+.fifth-bg {
+    background-image: url(/IMG/MX-Performance-Tri-Motor-Desktop.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 100vh;
+}
+
+.interior-section3 {
+    background-color: black;
+    min-height: 100vh;
+}
+
+.first-side {
+    text-align: justify;
+    min-height: 50vh;
+    display: block;
+}
+
+.first-side p, span {
+    display: block;
+    color: white;
+    min-height: 10vh;
+    padding: 2em 2em;
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+.interior-section3 img {
+    width: 100%;
+}
+
+.second-side p {
+    margin-left: 20%;
+}
+
+.presentation-ctc {
+    width: 100%;
+    min-height: 100vh;
+}
+
+.presentation-first-half {
+    width: 100%;
+    min-height: 60vh;
+    background-image: url(/IMG/tesla-1024x535.jpg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100%;
+    /* min-height: 75vh; */
+    display: flex;
+    justify-content: space-evenly;
+    /* transform: translateY(196%); */
+    /* margin-top: 22em; */
+    position: relative;
+}
+
+.presentation-down-text-container {
+    display: flex;
+    justify-content: center;
+    min-height: 107vh;
+    align-items: center;
+    position: absolute;
+    /* margin-bottom: 2em; */
+    padding: 1em;
+}
+
+.presentation-down-text-left-block {
+    padding: 1em;
+}
+
+.presentation-down-text-middle-block {
+    padding: 1.2em;
+}
+
+.presentation-down-text-rigth-block {
+    padding: 1em;
+}
+
+.presentation-second-half {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    min-height: 60vh;
+    font-size: 2em;
+}
+
+.second-half-left-block {
+    padding: 0.5em;
+    width: auto;
+    float: left;
+}
+
+.second-half-right-block {
+    padding: 0.5em;
+    width: 100%;
+    float: left;
+}
+
+#ctc2 {
+    font-size: .8em;
+    float: left;
+    margin-top: 2em;
+    border: .1em solid black;
+    padding: .3em;
+    border-radius: 1em;
+}
+
+.second-half-left-block {
+    color: black;
+}
+
+.vehicle-structure {
+    margin-top: 5em;
+    width: 100%;
+    min-height: 100vh;
+    background-color: rgba(221, 221, 221, 0.74);
+}
+
+.vehicle-structure-text-container {
+    width: 80%;
+    margin: 0 auto;
+    font-size: 1.2em;
+    min-height: 20vh;
+    padding: 2em;
+}
+
+.vehicle-structure img {
+    /* display: none; */
+    width: 100%;
+}
+
+.vehicle-structure-bottom-textblock {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    min-height: 76vh;
+    padding: 1em;
+}
+
+.left-block:hover {
+    border-left: .1em solid black;
+    border-right: .1em solid black;
+    border-top: .1em solid black;
+    padding: .2em;
+    transition: padding .2s linear;
+}
+
+.right-block:hover {
+    border-left: .1em solid black;
+    border-right: .1em solid black;
+    border-top: .1em solid black;
+    padding: .2em;
+    transition: padding .2s linear;
+}
+
+.left-block {
+    width: 50%;
+    float: left;
+}
+
+.left-block p {
+    float: left;
+}
+
+.left-block-text {
+    width: auto;
+    min-height: auto;
+}
+
+#triplet p {}
+
+.right-block, #triplet {
+    width: 50%;
+    float: right;
+}
+
+#grey-text {
+    color: grey;
+}
+
+#bigger-text {
+    font-size: 2em;
+}
+
+@media screen and (min-width: 600px) {
+    body {
+        overflow-x: hidden;
+    }
+    .landing-page {
+        background-image: url(/IMG/S8-modele--tesla-model-x.jpg);
+    }
+    .presentation-first-half {
+        width: 100%;
+        min-height: 60vh;
+        background-image: url(/IMG/tesla-1024x535.jpg);
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+        width: 100%;
+        /* min-height: 75vh; */
+        display: flex;
+        justify-content: space-evenly;
+        /* transform: translateY(196%); */
+        /* margin-top: 22em; */
+        position: relative;
+    }
+    #hamnav label {
+        display: none;
+    }
+    .navbar {}
+    .sub-navbar {
+        float: left;
+    }
+    .both-bar {
+        display: flex;
+        justify-content: space-evenly;
+        transform: translate(0);
+    }
+    #hamitems {
+        display: flex;
+        width: 100%;
+        justify-content: space-evenly;
+        white-space: nowrap;
+    }
+    .menu .navbar, .sub-navbar {
+        background: none;
+        border-top: none;
+        border-bottom: none;
+    }
+}
